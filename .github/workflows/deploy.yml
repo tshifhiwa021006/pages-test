@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -17,10 +17,6 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
-      - name: Create index.html
-        run: |
-          echo "<h1>Auto Generated Website 🚀</h1>" > index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
